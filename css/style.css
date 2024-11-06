@@ -1368,6 +1368,7 @@ ul.bringer-socials-list.stg-xl-gap {
     border-radius: var(--bringer-xs-br);
     transition: transform 0.1s, background-color 0.3s;
     will-change: transform;
+    pointer-events: auto !important;
 }
 .bringer-socials-list a::before {
     content: '';
