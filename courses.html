@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Page Title -->
-    <title>Курсы - Enlight</title>
+    <title>Курсы - Enlight.</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,54 @@
 </head>
 <body>
     <!-- Header -->
-    <div id="header"></div>
+    <header id="bringer-header" class="is-frosted is-sticky" data-appear="fade-down" data-unload="fade-up">
+        <div class="bringer-header-inner">
+            <div class="bringer-header-lp">
+                <a href="index.html" class="bringer-logo">
+                    <img src="img/logo.svg" alt="bringer." width="140" height="auto">
+                </a>
+            </div>
+            <div class="bringer-header-mp">
+                <nav class="bringer-nav">
+                    <ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75">
+                        <li>
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li id="nav-about">
+                            <a href="about.html">О нас</a>
+                        </li>
+                        <li class="current-menu-item">
+                            <a href="courses.html">Курсы</a>
+                        </li>
+                        <li id="nav-professions">
+                            <a href="professions.html">Профессии</a>
+                        </li>
+                        <li id="nav-blog">
+                            <a href="blog.html">Блог и Новости</a>
+                        </li>
+                        <li id="nav-contacts">
+                            <a href="contacts.html">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="bringer-header-rp">
+                <a href="login.html" class="bringer-button">Войти в класс</a>
+            </div>
+        </div>
+        <div class="bringer-mobile-header-inner">
+            <a href="index.html" class="bringer-logo">
+                <img src="img/logo.svg" alt="bringer." width="88" height="24">
+            </a>
+            <a href="#" class="bringer-mobile-menu-toggler">
+                <i class="bringer-menu-toggler-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </i>
+            </a>
+        </div>
+    </header>
 
     <!-- Main -->
     <main id="bringer-main">
@@ -63,31 +110,7 @@
     <!-- JS Scripts -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Загружаем header и footer
-            fetch("header.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("header").innerHTML = data;
-    
-                    // Определяем текущий URL
-                    const currentPage = window.location.pathname.split("/").pop();
-    
-                    // Словарь для сопоставления страниц и пунктов меню
-                    const pageToNavId = {
-                        "index.html": "nav-home",
-                        "about.html": "nav-about",
-                        "courses.html": "nav-courses",
-                        "professions.html": "nav-professions",
-                        "blog.html": "nav-blog",
-                        "contacts.html": "nav-contacts"
-                    };
-    
-                    // Найдем нужный id для активного пункта меню
-                    const activeNavId = pageToNavId[currentPage];
-                    if (activeNavId) {
-                        document.getElementById(activeNavId).classList.add("current-menu-parent");
-                    }
-                });
+            // Загружаем header
     
             fetch("footer.html")
                 .then(response => response.text())
