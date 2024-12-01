@@ -1,0 +1,78 @@
+/* Основные стили для модального окна */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Позиционирование относительно текущей прокрутки */
+    top: 0; /* Устанавливается динамически через JavaScript */
+    left: 0;
+    width: 100vw; /* Занимает всю ширину экрана */
+    height: 100vh; /* Занимает всю высоту экрана */
+    background-color: rgba(0, 0, 0, 0.8); /* Затемненный фон */
+    z-index: 1000; /* Поверх всех элементов */
+}
+
+
+
+/* Центрирование содержимого модального окна */
+.modal-content {
+    position: absolute; /* Позиционируется относительно модального контейнера */
+    top: 50%; /* Центр по вертикали */
+    left: 50%; /* Центр по горизонтали */
+    transform: translate(-50%, -50%); /* Выравнивание относительно центра */
+    background-color: #3F6EE9;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 700px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
+}
+
+/* Стили для кнопки закрытия */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 50px;
+    cursor: pointer;
+    color: #FFF;
+}
+
+/* Стили для формы */
+#requestForm input {
+    background: #F5F7FA27;
+    color: #F5F7FA;
+    font-weight: 600;
+    font-size: 56px;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    border-radius: 24px;
+    padding: 32px;
+    
+    /* width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; */
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+#requestForm button {
+    background: #F5F7FA;
+    border-color: #F5F7FA;
+    border-radius: 14px;
+    font-size: 26px;
+    color: #3F6EE9;
+    letter-spacing: -0.05em;
+    padding: 32px;
+    font-weight: 500;
+    /* margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #3F6EE9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; */
+}
